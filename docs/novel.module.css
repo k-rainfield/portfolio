@@ -1,0 +1,87 @@
+/* 小説コンテンツのコンテナ */
+.novelContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  margin: 2rem 0;
+  align-items: flex-start;
+}
+
+/* テキストコンテンツ部分 */
+.novelContent {
+  flex: 2;
+}
+
+/* 画像部分 */
+.novelImage {
+  flex: 1;
+  max-width: 300px;
+}
+
+.novelImage img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.novelImage img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* 販売サイトのコンテナ - flexからインラインブロックに変更 */
+.storeContainer {
+  margin-top: 1.5rem;
+}
+
+/* 各販売サイトのカード - インライン要素として表示 */
+.storeItem {
+  display: inline-flex;
+  padding: 0rem 1rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  min-width: 80px;
+  min-height: 60px;
+  margin-right: 1rem;
+  margin-bottom: 0rem;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.storeItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.storeItem a{
+  display: flex;
+  text-decoration: none;
+  color: #333333;
+  font-weight: 500;
+  width: 100%;
+  line-height: 40px; /* 縦方向の中央揃えのため */
+  align-items: center;
+  vertical-align: middle;
+}
+
+.storeItem img {
+  height: 32px;
+  width: auto;
+  margin-bottom: 0.5rem;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+  .novelContainer {
+    flex-direction: column;
+  }
+  
+  .novelImage {
+    max-width: 100%;
+    margin-top: 1rem;
+  }
+}
