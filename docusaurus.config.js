@@ -9,7 +9,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: '雨野 功介 ',
-  tagline: 'Kosuke Amano',
+  tagline: 'Welcome to my portfolio website!',
   // favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -76,6 +76,7 @@ const config = {
             position: 'left',
             label: 'Works',
           },
+          {to: '/about', label: 'About', position: 'left'},
           // {to: '/blog', label: 'Blog', position: 'left'},
           // {
           //   href: '',
@@ -100,7 +101,7 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Twitter',
+                label: 'X(Twitter)',
                 href: 'https://twitter.com/kosuke_amano',
               },
             ],
@@ -115,7 +116,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Kosuke Amano, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Kosuke Amano. Built with Docusaurus.`,
       },
       prism: {
         theme: prismThemes.nightOwlLight,

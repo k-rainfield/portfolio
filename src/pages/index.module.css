@@ -8,16 +8,159 @@
   text-align: center;
   position: relative;
   overflow: hidden;
+  height: 80vh; /* 画面の高さの80%に設定 */
+  min-height: 500px;
+  background-image: url('/img/hero_image.JPG');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* 透過黒色のオーバーレイ */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  /* display: inline-flex; */
+  align-items: center;
+  justify-content: center;
+  gap: 1rem; /* 間隔を縮小 */
+  margin-top: 4rem;
+  margin-bottom: 2rem; /* ボタンとの間隔を確保 */
+}
+
+.heroTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.heroSubtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.heroText {
+  flex: 1;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.imageContainer {
+  flex: 1.2; /* 写真の比率を大きく */
+  max-width: 500px; /* 最大幅を拡大 */
+}
+
+.heroImage {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+/* .heroImage:hover {
+  transform: scale(1.02);
+} */
+
+.buttons {  
+  display: inline-block;
+  align-items: center;
+  justify-content: center; /* 中央揃え */
+  margin-top: 6rem;
+  margin-bottom: 1rem;
+  gap: 1rem; /* ボタン間の間隔 */
+  flex-wrap: wrap; /* 画面幅が狭い場合に折り返し */
+}
+
+.customButton {
+  margin: 0 0.5rem;
+  background-color: white;
+  color: black;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  font-weight: 800;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid #ebedf0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.customButton:hover {
+  background-color: #f5f5f5;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
 }
 
 @media screen and (max-width: 996px) {
   .heroBanner {
     padding: 2rem;
+    height: 70vh;
+  }
+  
+  .heroContent {
+    flex-direction: column;
+  }
+  
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+  
+  .heroSubtitle {
+    font-size: 1.2rem;
+  }
+  
+  .heroText {
+    text-align: center;
+    align-items: center;
+  }
+  
+  .imageContainer {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
 }
 
-.buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+@media screen and (max-width: 768px) {
+  .heroBanner {
+    height: 60vh;
+    min-height: 400px;
+  }
+  
+  .heroTitle {
+    font-size: 2rem;
+  }
+  
+  .heroContent {
+    flex-direction: column;
+  }
+  
+  .heroText {
+    text-align: center;
+    align-items: center;
+  }
+  
+  .imageContainer {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
 }
