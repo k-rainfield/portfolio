@@ -10,7 +10,7 @@
   overflow: hidden;
   height: 80vh; /* 画面の高さの80%に設定 */
   min-height: 500px;
-  background-image: url('/img/hero_image.JPG');
+  background-image: url('/img/hero_image.jpeg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
