@@ -77,7 +77,7 @@ const config = {
             label: 'Works',
           },
           {to: '/about', label: 'About', position: 'left'},
-          // {to: '/blog', label: 'Blog', position: 'left'},
+          {to: '/blog', label: 'Blog', position: 'left'},
           // {
           //   href: '',
           //   label: 'GitHub',
